@@ -196,4 +196,29 @@
 
   });
 
+
+ /**
+   * Service tabs functionality
+   */
+ document.querySelectorAll('.service-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Remove 'active' class from all service links
+    document.querySelectorAll('.service-link').forEach(link => link.classList.remove('active'));
+
+    // Add 'active' class to the clicked link
+    this.classList.add('active');
+
+    // Hide all service content
+    document.querySelectorAll('.service-content').forEach(content => content.classList.remove('active'));
+
+    // Show the corresponding service content
+    const target = this.getAttribute('data-target');
+    document.querySelector(target).classList.add('active');
+  });
+});
+
+
+
 })();

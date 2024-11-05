@@ -1412,7 +1412,7 @@ section,
 }
 
 .testimonials .testimonial-item p {
-  font-style: italic;
+  
   margin: 0 auto 15px auto;
 }
 
@@ -1982,7 +1982,7 @@ section,
 }
 
 .team .member .member-info span {
-  font-style: italic;
+  
   display: block;
   font-size: 15px;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
@@ -2148,7 +2148,7 @@ section,
   color: var(--default-color);
   line-height: 1.6;
   margin-bottom: 0;
-  font-style: italic;
+  
   font-weight: 500;
   font-size: 22px;
 }
@@ -2530,7 +2530,7 @@ section,
 }
 
 .blog-author-widget p {
-  font-style: italic;
+  
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin: 10px 0 0 0;
 }
@@ -2643,7 +2643,7 @@ section,
 
 .recent-posts-widget .post-item time {
   display: block;
-  font-style: italic;
+  
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
@@ -2678,4 +2678,8 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+.logo{
+width: 7rem;
+height: 7rem;
 }

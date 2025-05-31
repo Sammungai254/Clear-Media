@@ -1,21 +1,4 @@
-
-:root {
-  --background-color: #ffffff;
-  --default-color: #333333;
-  --heading-color: #c62828;
-  --accent-color: #c62828;
-  --surface-color: #f9f9f9;
-  --contrast-color: #ffffff;
-
-  --nav-color: #ffffff;
-  --nav-hover-color: #a31515;
-  --nav-mobile-background-color: #ffffff;
-  --nav-dropdown-background-color: #ffffff;
-  --nav-dropdown-color: #333333;
-  --nav-dropdown-hover-color: #c62828;
-}
-
-/**
+ /**
 * Template Name: Moderna
 * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
 * Updated: Aug 07 2024 with Bootstrap v5.3.3
@@ -28,13 +11,31 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
-
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #555555; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #1e4356; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #68a4c4; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-
+:root {
+  --nav-color: #ffffff;  /* The default color of the main navmenu links */
+  --nav-hover-color: #fd7e14; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #555555; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #68a4c4; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
@@ -52,7 +53,9 @@
 }
 
 /* Smooth scroll */
-
+:root {
+  scroll-behavior: smooth;
+}
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -218,15 +221,13 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-/* Normal Header */
-/* Normal Header - More Compact */
 .header {
   --background-color: rgba(194, 43, 43, 0);
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 4px 0; /* Further reduced */
+  padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -236,31 +237,22 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 18px; /* Smaller logo */
-  margin-right: 4px;
+  max-height: 32px;
+  margin-right: 8px;
 }
 
 .header .logo h1 {
-  font-size: 20px; /* Smaller font */
+  font-size: 30px;
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
 }
 
-/* Scrolled Header - Ultra Compact */
+/* Global Header on Scroll
+------------------------------*/
 .scrolled .header {
   --background-color: #1d4356;
-  padding: 2px 0; /* Very tight spacing */
 }
-
-.scrolled .header .logo img {
-  max-height: 16px;
-}
-
-.scrolled .header .logo h1 {
-  font-size: 18px;
-}
-
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -1029,6 +1021,9 @@ section,
 # Featured Services Section
 --------------------------------------------------------------*/
 .featured-services {
+  --cyan-color: #0dcaf0;
+  --orange-color: #fd7e14;
+  --teal-color: #20c997;
   --red-color: #df1529;
 }
 
@@ -1053,14 +1048,12 @@ section,
   justify-content: center;
   transition: ease-in-out 0.3s;
   position: relative;
-  background-color: color-mix(in srgb, var(--red-color) 10%, white 95%);
 }
 
 .featured-services .service-item .icon i {
   font-size: 28px;
   transition: 0.5s;
   position: relative;
-  color: var(--red-color);
 }
 
 .featured-services .service-item h3 {
@@ -1077,17 +1070,87 @@ section,
 
 .featured-services .service-item:hover {
   box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.1);
-  border-color: var(--red-color);
 }
 
-.featured-services .service-item:hover .icon {
-  background-color: var(--red-color);
+.featured-services .service-item.item-cyan .icon {
+  background-color: color-mix(in srgb, var(--cyan-color) 10%, white 95%);
 }
 
-.featured-services .service-item:hover .icon i {
+.featured-services .service-item.item-cyan .icon i {
+  color: var(--cyan-color);
+}
+
+.featured-services .service-item.item-cyan:hover {
+  border-color: var(--cyan-color);
+}
+
+.featured-services .service-item.item-cyan:hover .icon {
+  background-color: var(--cyan-color);
+}
+
+.featured-services .service-item.item-cyan:hover .icon i {
   color: var(--contrast-color);
 }
 
+.featured-services .service-item.item-orange .icon {
+  background-color: color-mix(in srgb, var(--orange-color) 10%, white 95%);
+}
+
+.featured-services .service-item.item-orange .icon i {
+  color: var(--orange-color);
+}
+
+.featured-services .service-item.item-orange:hover {
+  border-color: var(--orange-color);
+}
+
+.featured-services .service-item.item-orange:hover .icon {
+  background-color: var(--orange-color);
+}
+
+.featured-services .service-item.item-orange:hover .icon i {
+  color: var(--contrast-color);
+}
+
+.featured-services .service-item.item-teal .icon {
+  background-color: color-mix(in srgb, var(--teal-color) 10%, white 95%);
+}
+
+.featured-services .service-item.item-teal .icon i {
+  color: var(--teal-color);
+}
+
+.featured-services .service-item.item-teal:hover {
+  border-color: var(--teal-color);
+}
+
+.featured-services .service-item.item-teal:hover .icon {
+  background-color: var(--teal-color);
+}
+
+.featured-services .service-item.item-teal:hover .icon i {
+  color: var(--contrast-color);
+}
+
+.featured-services .service-item.item-red .icon {
+  background-color: color-mix(in srgb, var(--red-color) 10%, white 95%);
+}
+
+.featured-services .service-item.item-red .icon i {
+  color: var(--red-color);
+}
+
+.featured-services .service-item.item-red:hover {
+  border-color: var(--red-color);
+}
+
+.featured-services .service-item.item-red:hover .icon {
+  background-color: var(--red-color);
+}
+
+.featured-services .service-item.item-red:hover .icon i {
+  color: var(--contrast-color);
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -1127,6 +1190,7 @@ section,
 .about .content h3 {
   font-size: 1.75rem;
   font-weight: 700;
+  color: #c22b2b; /* red theme heading */
 }
 
 .about .content ul {
@@ -1140,7 +1204,7 @@ section,
 }
 
 .about .content ul i {
-  color: var(--accent-color);
+  color: #c22b2b; /* red icon accent */
   margin-right: 0.5rem;
   line-height: 1.2;
   font-size: 1.25rem;
@@ -1154,7 +1218,32 @@ section,
   position: absolute;
   left: calc(50% - 47px);
   top: calc(50% - 47px);
+  background-color: #c22b2b; /* red background */
+  border-radius: 50%;
+  width: 94px;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  box-shadow: 0 0 0 0 rgba(194, 43, 43, 0.7);
+  animation: pulse 2s infinite;
 }
+
+/* Optional pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(194, 43, 43, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(194, 43, 43, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(194, 43, 43, 0);
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Features Section
@@ -1202,6 +1291,7 @@ section,
 .features .features-item p:last-child {
   margin-bottom: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Stats Section
@@ -2619,52 +2709,4 @@ section,
 .logo{
 width: 7rem;
 height: 7rem;
-}
-
-
-/* Apply red-themed background to header, footer, and nav */
-.header,
-.footer {
-  background-color: #c62828 !important;
-  color: #ffffff !important;
-}
-
-.header .logo h1,
-.footer .footer-about a,
-.footer h4,
-.footer .footer-links ul a,
-.footer .footer-newsletter h4 {
-  color: #ffffff !important;
-}
-
-.navmenu a,
-.navmenu .dropdown ul a {
-  color: #ffffff !important;
-}
-
-.navmenu li:hover > a,
-.navmenu .active {
-  color: #ffebee !important;
-}
-
-.navmenu .dropdown ul {
-  background-color: #b71c1c !important;
-}
-
-.navmenu .dropdown ul a:hover {
-  color: #ffcccb !important;
-}
-
-.footer .footer-newsletter {
-  background-color: #b71c1c !important;
-}
-
-.footer .social-links a {
-  border-color: #ffffff !important;
-  color: #ffffff !important;
-}
-
-.footer .social-links a:hover {
-  background-color: #ffffff !important;
-  color: #c62828 !important;
 }

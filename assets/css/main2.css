@@ -218,15 +218,13 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-/* Normal Header */
-/* Normal Header - More Compact */
 .header {
   --background-color: rgba(194, 43, 43, 0);
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 4px 0; /* Further reduced */
+  padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -236,31 +234,22 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 18px; /* Smaller logo */
-  margin-right: 4px;
+  max-height: 32px;
+  margin-right: 8px;
 }
 
 .header .logo h1 {
-  font-size: 20px; /* Smaller font */
+  font-size: 30px;
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
 }
 
-/* Scrolled Header - Ultra Compact */
+/* Global Header on Scroll
+------------------------------*/
 .scrolled .header {
   --background-color: #1d4356;
-  padding: 2px 0; /* Very tight spacing */
 }
-
-.scrolled .header .logo img {
-  max-height: 16px;
-}
-
-.scrolled .header .logo h1 {
-  font-size: 18px;
-}
-
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -1029,6 +1018,9 @@ section,
 # Featured Services Section
 --------------------------------------------------------------*/
 .featured-services {
+  --cyan-color: #0dcaf0;
+  --orange-color: #fd7e14;
+  --teal-color: #20c997;
   --red-color: #df1529;
 }
 
@@ -1053,14 +1045,12 @@ section,
   justify-content: center;
   transition: ease-in-out 0.3s;
   position: relative;
-  background-color: color-mix(in srgb, var(--red-color) 10%, white 95%);
 }
 
 .featured-services .service-item .icon i {
   font-size: 28px;
   transition: 0.5s;
   position: relative;
-  color: var(--red-color);
 }
 
 .featured-services .service-item h3 {
@@ -1077,17 +1067,87 @@ section,
 
 .featured-services .service-item:hover {
   box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.1);
-  border-color: var(--red-color);
 }
 
-.featured-services .service-item:hover .icon {
-  background-color: var(--red-color);
+.featured-services .service-item.item-cyan .icon {
+  background-color: color-mix(in srgb, var(--cyan-color) 10%, white 95%);
 }
 
-.featured-services .service-item:hover .icon i {
+.featured-services .service-item.item-cyan .icon i {
+  color: var(--cyan-color);
+}
+
+.featured-services .service-item.item-cyan:hover {
+  border-color: var(--cyan-color);
+}
+
+.featured-services .service-item.item-cyan:hover .icon {
+  background-color: var(--cyan-color);
+}
+
+.featured-services .service-item.item-cyan:hover .icon i {
   color: var(--contrast-color);
 }
 
+.featured-services .service-item.item-orange .icon {
+  background-color: color-mix(in srgb, var(--orange-color) 10%, white 95%);
+}
+
+.featured-services .service-item.item-orange .icon i {
+  color: var(--orange-color);
+}
+
+.featured-services .service-item.item-orange:hover {
+  border-color: var(--orange-color);
+}
+
+.featured-services .service-item.item-orange:hover .icon {
+  background-color: var(--orange-color);
+}
+
+.featured-services .service-item.item-orange:hover .icon i {
+  color: var(--contrast-color);
+}
+
+.featured-services .service-item.item-teal .icon {
+  background-color: color-mix(in srgb, var(--teal-color) 10%, white 95%);
+}
+
+.featured-services .service-item.item-teal .icon i {
+  color: var(--teal-color);
+}
+
+.featured-services .service-item.item-teal:hover {
+  border-color: var(--teal-color);
+}
+
+.featured-services .service-item.item-teal:hover .icon {
+  background-color: var(--teal-color);
+}
+
+.featured-services .service-item.item-teal:hover .icon i {
+  color: var(--contrast-color);
+}
+
+.featured-services .service-item.item-red .icon {
+  background-color: color-mix(in srgb, var(--red-color) 10%, white 95%);
+}
+
+.featured-services .service-item.item-red .icon i {
+  color: var(--red-color);
+}
+
+.featured-services .service-item.item-red:hover {
+  border-color: var(--red-color);
+}
+
+.featured-services .service-item.item-red:hover .icon {
+  background-color: var(--red-color);
+}
+
+.featured-services .service-item.item-red:hover .icon i {
+  color: var(--contrast-color);
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -2619,52 +2679,4 @@ section,
 .logo{
 width: 7rem;
 height: 7rem;
-}
-
-
-/* Apply red-themed background to header, footer, and nav */
-.header,
-.footer {
-  background-color: #c62828 !important;
-  color: #ffffff !important;
-}
-
-.header .logo h1,
-.footer .footer-about a,
-.footer h4,
-.footer .footer-links ul a,
-.footer .footer-newsletter h4 {
-  color: #ffffff !important;
-}
-
-.navmenu a,
-.navmenu .dropdown ul a {
-  color: #ffffff !important;
-}
-
-.navmenu li:hover > a,
-.navmenu .active {
-  color: #ffebee !important;
-}
-
-.navmenu .dropdown ul {
-  background-color: #b71c1c !important;
-}
-
-.navmenu .dropdown ul a:hover {
-  color: #ffcccb !important;
-}
-
-.footer .footer-newsletter {
-  background-color: #b71c1c !important;
-}
-
-.footer .social-links a {
-  border-color: #ffffff !important;
-  color: #ffffff !important;
-}
-
-.footer .social-links a:hover {
-  background-color: #ffffff !important;
-  color: #c62828 !important;
 }

@@ -227,46 +227,27 @@ h6 {
 --------------------------------------------------------------*/
 /* Normal Header */
 /* Normal Header - More Compact */
-.header {
-  --background-color: rgba(194, 43, 43, 0);
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 4px 0; /* Further reduced */
-  transition: all 0.5s;
-  z-index: 997;
-}
-
-.header .logo {
-  line-height: 1;
-}
-
 .header .logo img {
-  max-height: 18px; /* Smaller logo */
+  max-height: 24px; /* Slightly bigger logo */
   margin-right: 4px;
 }
 
 .header .logo h1 {
-  font-size: 20px; /* Smaller font */
+  font-size: 24px; /* Slightly bigger font */
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
 }
 
 /* Scrolled Header - Ultra Compact */
-.scrolled .header {
-  --background-color: #1d4356;
-  padding: 2px 0; /* Very tight spacing */
-}
-
 .scrolled .header .logo img {
-  max-height: 16px;
+  max-height: 20px; /* Slightly larger on scroll too */
 }
 
 .scrolled .header .logo h1 {
-  font-size: 18px;
+  font-size: 20px; /* Slightly larger font on scroll */
 }
+
 
 
 /*--------------------------------------------------------------
@@ -857,86 +838,65 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 80vh;
-  overflow: hidden;
+  height: calc(90vh - 100px); /* Adjust '80px' to your navbar height */
   display: flex;
   align-items: center;
-  position: relative;
-  background-color: transparent;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 130%;
-  height: 95%;
-  background: linear-gradient(to right, color-mix(in srgb, var(--background-color), transparent 90%), var(--background-color)), url("../img/cm1.jpg") center top no-repeat;
+  justify-content: center;
+  background: url("../img/cm1.jpg") top center no-repeat;
   background-size: cover;
-  z-index: 0;
-  border-radius: 0 0 50% 50%;
-  transform: translateX(-50%) rotate(0deg);
+  background-color: #000;
+  margin-top: 112px; /* Matches the navbar height */
+  box-sizing: border-box;
 }
 
+
+
+
+/* Remove dark overlays */
+.hero::after,
 .hero::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 130%;
-  height: 96%;
-  background: var(--background-color);
-  opacity: 0.3;
-  z-index: 0;
-  border-radius: 0 0 50% 50%;
-  transform: translateX(-50%) translateY(18px) rotate(2deg);
+  display: none;
 }
 
-.hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
+/* Carousel structure */
 .hero .carousel {
   position: relative;
   width: 100%;
   display: flex;
   align-items: center;
-  z-index: 3;
+  z-index: 1;
 }
 
+/* Center content */
 .hero .carousel-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  height: 90vh;
 }
 
+/* Hero text styles */
 .hero h2 {
-  margin-bottom: 30px;
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 64px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
   animation: fadeInDown 1s both;
-  display: block;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.hero p {
-  width: 80%;
-  margin: 0 auto 30px auto;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  animation: fadeInDown 1s both 0.2s;
+/* Hide unused elements */
+.hero p,
+.hero .btn-get-started {
+  display: none;
 }
 
+/* Carousel controls */
 .hero .carousel-control-prev,
 .hero .carousel-control-next {
-  width: 10%;
+  width: 5%;
 }
 
 .hero .carousel-control-next-icon,
@@ -946,36 +906,17 @@ section,
   line-height: 1;
   width: auto;
   height: auto;
+  color: #fff;
 }
 
-.hero .btn-get-started {
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 32px;
-  border-radius: 50px;
-  transition: 0.5s;
-  line-height: 1;
-  margin: 10px;
-  color: var(--default-color);
-  animation: fadeInUp 1s both 0.4s;
-  border: 2px solid var(--accent-color);
-}
-
-.hero .btn-get-started:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  text-decoration: none;
-}
-
+/* Carousel indicators */
 .hero .carousel-indicators {
-  bottom: -60px;
+  bottom: -40px;
 }
 
 .hero .carousel-indicators li {
   cursor: pointer;
-  background: var(--default-color);
+  background: #fff;
   overflow: hidden;
   border: 0;
   width: 12px;
@@ -987,39 +928,10 @@ section,
 
 .hero .carousel-indicators li.active {
   opacity: 1;
-  background: var(--accent-color);
+  background: var(--accent-color, #ff4a17);
 }
 
-@media (min-width: 1024px) {
-  .hero p {
-    width: 60%;
-  }
-
-  .hero .carousel-control-prev,
-  .hero .carousel-control-next {
-    width: 5%;
-  }
-}
-
-@media (max-width: 768px),
-(max-height: 700px) {
-  .hero h2 {
-    font-size: 28px;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
+/* Animations */
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -1031,6 +943,16 @@ section,
     transform: translate3d(0, 0, 0);
   }
 }
+
+/* Responsive tweaks */
+@media (max-width: 768px),
+(max-height: 700px) {
+  .hero h2 {
+    font-size: 36px;
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Featured Services Section

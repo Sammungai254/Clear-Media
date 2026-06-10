@@ -78,33 +78,94 @@
     
 
     <section id="features" class="features section">
-      <div class="container">
-        <div class="row gy-4">
-    
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="feature-box text-center">
-              <img src="assets/img/in1.png" class="img-fluid" alt="Billboards">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper init-swiper features-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 2500,
+                "disableOnInteraction": false
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".features-swiper .swiper-button-next",
+                "prevEl": ".features-swiper .swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".features-swiper .swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 20
+                },
+                "640": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 30
+                },
+                "992": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 30
+                },
+                "1200": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 40
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+              <div class="feature-box text-center">
+                <img src="assets/img/in1.png" class="img-fluid" alt="Billboards">
+              </div>
             </div>
-          </div>
-    
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="feature-box text-center">
-              <img src="assets/img/in2.png" class="img-fluid" alt="Digital Screens">
+
+            <div class="swiper-slide">
+              <div class="feature-box text-center">
+                <img src="assets/img/in2.png" class="img-fluid" alt="Digital Screens">
+              </div>
             </div>
-          </div>
-    
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="feature-box text-center">
-              <img src="assets/img/in3.png" class="img-fluid" alt="Street Furniture">
+
+            <div class="swiper-slide">
+              <div class="feature-box text-center">
+                <img src="assets/img/in3.png" class="img-fluid" alt="Street Furniture">
+              </div>
             </div>
-          </div>
-    
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="feature-box text-center">
-              <img src="assets/img/in4.png" class="img-fluid" alt="Mobile Signs">
+
+            <div class="swiper-slide">
+              <div class="feature-box text-center">
+                <img src="assets/img/in4.png" class="img-fluid" alt="Mobile Signs">
+              </div>
             </div>
+
+            <div class="swiper-slide">
+              <div class="feature-box text-center">
+                <img src="assets/img/SPOLES6.png" class="img-fluid" alt="Street Pole Advertising">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="feature-box text-center">
+                <img src="assets/img/Tollstation4.png" class="img-fluid" alt="Toll Station Branding">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="feature-box text-center">
+                <img src="assets/img/LED3.png" class="img-fluid" alt="LED Billboard Advertising">
+              </div>
+            </div>
+
           </div>
-    
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -222,6 +283,61 @@
       </div>
     </div><!-- Features Item -->
 
+    <div class="row gy-4 align-items-center features-item">
+      <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+        <img src="assets/img/SPOLES1.JPG" class="img-fluid" alt="Street Pole Advertising on the Nairobi Expressway">
+      </div>
+      <div class="col-md-7" data-aos="fade-up">
+        <h3>Street Pole Advertising</h3>
+          <p>
+            Street pole advertising on the Nairobi Expressway gives brands consistent visibility to motorists, commuters, airport users, and business travellers along one of Nairobi's most important transport routes.
+          </p>
+          <p>
+            Street pole media delivers proximity, repetition, and strong corridor presence, making it an effective support format for larger outdoor campaigns, digital screens, pillar branding, and corridor domination packages.
+          </p>
+          <ul>
+            <li><i class="bi bi-check"></i><span> Prime audience of motorists, commuters, and airport users.</span></li>
+            <li><i class="bi bi-check"></i><span> High frequency and repeated exposure along a strategic corridor.</span></li>
+            <li><i class="bi bi-check"></i><span> Cost-effective impact in prime expressway locations.</span></li>
+          </ul>
+      </div>
+    </div><!-- Features Item -->
+
+    <div class="row gy-4 align-items-center features-item">
+      <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
+        <img src="assets/img/Tollstation1.JPG" class="img-fluid" alt="Toll Station Branding on the Nairobi Expressway">
+      </div>
+      <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+        <h3>Toll Station Branding</h3>
+          <p>
+            Toll station branding offers advertisers premium visibility at high-attention points along the Nairobi Expressway. Positioned where motorists slow down, stop, or pass through controlled access areas, this format provides strong dwell time and repeated exposure to commuters, airport users, business travellers, and urban motorists.
+          </p>
+          <p>
+            Ideal for brand awareness, product launches, financial services, telecoms, automotive, FMCG, and lifestyle campaigns, toll station branding gives brands a powerful presence within one of Nairobi's most strategic transport corridors—creating memorable engagement in a modern, premium road environment.
+          </p>
+      </div>
+    </div><!-- Features Item -->
+
+    <div class="row gy-4 align-items-center features-item">
+      <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+        <img src="assets/img/LED1.JPG" class="img-fluid" alt="LED Billboard Advertising">
+      </div>
+      <div class="col-md-7" data-aos="fade-up">
+        <h3>LED Billboard Advertising</h3>
+          <p>
+            LED billboard advertising gives brands a bold, dynamic, and high-impact platform to capture attention in premium outdoor locations. With bright digital displays, motion graphics, multiple creative rotations, and day-and-night visibility, LED billboards are ideal for brands looking to stand out in busy urban environments.
+          </p>
+          <p>
+            This format allows advertisers to run flexible campaigns, update messaging quickly, schedule creatives by time of day, and showcase multiple products or offers within one campaign cycle—especially effective for product launches, tactical promotions, events, real estate, and lifestyle campaigns.
+          </p>
+          <ul>
+            <li><i class="bi bi-check"></i><span> Bright, dynamic displays with day-and-night visibility.</span></li>
+            <li><i class="bi bi-check"></i><span> Flexible scheduling with multiple creative rotations.</span></li>
+            <li><i class="bi bi-check"></i><span> Professionally managed sites for strong, premium presence.</span></li>
+          </ul>
+      </div>
+    </div><!-- Features Item -->
+
   </div>
 
 </section><!-- /Features Section -->
@@ -255,9 +371,9 @@
             <span class="sitename">Clear Media</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>Brunei House, Witu rd. off Lusaka rd.</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+254737242424</span></p>
-            <p><strong>Email:</strong> <span>info@clearmedia.co.ke</span></p>
+            <p>A23, Ramco Court, Bellevue, Mombasa Road, Nairobi, Kenya</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254 737242424</span></p>
+            <p><strong>Email:</strong> <span>operations@clearmedia.co.ke</span></p>
           </div>
         </div>
 

@@ -1088,6 +1088,57 @@ section,
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
+.features .features-swiper {
+  padding: 10px 0 50px;
+}
+
+.features .features-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.features .feature-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features .feature-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.features .feature-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.features .features-swiper .swiper-button-prev,
+.features .features-swiper .swiper-button-next {
+  color: var(--accent-color);
+}
+
+.features .features-swiper .swiper-button-prev:after,
+.features .features-swiper .swiper-button-next:after {
+  font-size: 26px;
+}
+
+.features .features-swiper .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.features .features-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
 .features .features-item {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
@@ -2601,4 +2652,27 @@ height: 7rem;
 .footer .social-links a:hover {
   background-color: #ffffff !important;
   color: #c62828 !important;
+}
+
+/* Mobile nav menu - keep links visible on the dropdown panel */
+@media (max-width: 1199px) {
+  .navmenu ul {
+    background-color: #b71c1c !important;
+  }
+
+  .navmenu a,
+  .navmenu a:focus,
+  .navmenu .dropdown ul a {
+    color: #ffffff !important;
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: #ffcccb !important;
+  }
+
+  .mobile-nav-toggle {
+    color: #ffffff !important;
+  }
 }

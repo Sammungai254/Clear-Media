@@ -248,6 +248,22 @@ h6 {
   font-size: 20px; /* Slightly larger font on scroll */
 }
 
+/* Mobile header: give the bar real height and a clearly visible logo.
+   Overrides the inline max-height on the logo <img>. */
+@media (max-width: 1199px) {
+  .header {
+    padding: 12px 0;
+  }
+
+  .header .logo img {
+    max-height: 56px !important;
+  }
+
+  .mobile-nav-toggle {
+    font-size: 34px;
+  }
+}
+
 
 
 /*--------------------------------------------------------------
@@ -1150,6 +1166,61 @@ section,
 @media (max-width: 640px) {
   .features .features-item+.features-item {
     margin-top: 40px;
+  }
+
+  /* Mobile: drop the carousel and stack the feature cards vertically */
+  .features .features-swiper .swiper-wrapper {
+    display: block;
+  }
+
+  .features .features-swiper .swiper-slide {
+    width: 100% !important;
+    margin: 0 0 20px 0 !important;
+  }
+
+  /* Hide carousel chrome that has no purpose when stacked */
+  .features .features-swiper .swiper-button-prev,
+  .features .features-swiper .swiper-button-next,
+  .features .features-swiper .swiper-pagination {
+    display: none;
+  }
+
+  .features .feature-box {
+    padding: 15px;
+  }
+
+  .features .feature-box img {
+    height: 320px;
+  }
+
+  /* Readability: enlarge content text on phones */
+  body {
+    font-size: 17px;
+  }
+
+  .about .content ul li span,
+  .about .content p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .features .features-item p,
+  .features .features-item ul li span {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .features .features-item h3,
+  .about .content h3 {
+    font-size: 24px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .section-title p {
+    font-size: 16px;
   }
 }
 

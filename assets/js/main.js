@@ -132,6 +132,15 @@
    */
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+      // On mobile, skip the carousel for the features slider so the cards
+      // simply stack vertically as the user scrolls (handled via CSS).
+      if (
+        window.innerWidth <= 640 &&
+        swiperElement.classList.contains("features-swiper")
+      ) {
+        return;
+      }
+
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
